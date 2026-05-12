@@ -12,18 +12,12 @@ int main(){
             scanf("%lf",&a[i][j]);
         }
     }
-    for(i=1; i<11; i++){
-        if(i>=6){
-            if(m==1){
-                m=1;
+    for(i=0; i<12; i++){
+        for(j=0; j<12; j++){
+            if(j<i && j<11-i){
+                sum+=a[i][j];
+                count++;
             }
-            else{
-                m+=2;
-            }
-        }
-        for(j=0; j<i-m; j++){
-            sum+=a[i][j];
-            count++;
         }
     }
     aver=sum/count;
